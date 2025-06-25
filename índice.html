@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Receitas da Mycaelle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cor-fundo: #FADADD;
+      --cor-principal: #E5989B;
+      --cor-secundaria: #A267AC;
+      --cor-branco: #FFFFFF;
+      --cor-borda: #EDEDED;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Chakra Petch', sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-secundaria);
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: var(--cor-secundaria);
+    }
+
+    header p {
+      font-size: 18px;
+      color: var(--cor-principal);
+      margin-top: 8px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--cor-secundaria);
+      border-bottom: 3px solid var(--cor-principal);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .receitas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .receita {
+      background-color: var(--cor-branco);
+      border: 1px solid var(--cor-borda);
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      transition: transform 0.2s ease;
+    }
+
+    .receita:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(162,103,172,0.3);
+    }
+
+    .receita h3 {
+      color: var(--cor-secundaria);
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .receita p {
+      font-size: 15px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .receita a {
+      color: var(--cor-principal);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-bottom: 1.5px solid var(--cor-principal);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .receita a:hover {
+      color: var(--cor-secundaria);
+      border-color: var(--cor-secundaria);
+    }
+
+    /* Formulário */
+    #comentarios {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 15px;
+      background: var(--cor-branco);
+      border-radius: 12px;
+      border: 1px solid var(--cor-borda);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }
+
+    #comentarios h2 {
+      margin-bottom: 15px;
+    }
+
+    form {
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 90px;
+      border: 1px solid var(--cor-borda);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      resize: vertical;
+      font-family: 'Chakra Petch', sans-serif;
+      color: var(--cor-secundaria);
+    }
+
+    button {
+      background-color: var(--cor-principal);
+      color: var(--cor-branco);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background-color: var(--cor-secundaria);
+    }
+
+    /* Mensagem de sucesso */
+    #msg-sucesso {
+      color: green;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 400px) {
+      body {
+        padding: 15px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      .receita {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Receitas da Mycaelle</h1>
+    <p>Doces, bolos e pratos feitos com amor ♥</p>
+  </header>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <p>Oi! Eu sou a Mycaelle, apaixonada por receitas caseiras e sabores que aquecem o coração. Aqui compartilho receitas culinárias, dicas de cozinha e ideias para você fazer aí na sua casa!</p>
+  </section>
+
+  <section>
+    <h2>Minhas Receitas</h2>
+    <div class="receitas">
+
+      <article class="receita">
+        <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+        <p>Clássico e fofinho! Uma das receitas mais queridas por todos, perfeita pro café da tarde.</p>
+        <p><strong>Ingredientes (massa):</strong><br>
+          3 ovos, 3 cenouras médias picadas, 1 xícara de óleo, 2 xícaras de açúcar, 2 xícaras de farinha de trigo, 1 colher de fermento em pó.</p>
+        <p><strong>Ingredientes (cobertura):</strong><br>
+          1 lata de leite condensado, 6 colheres de chocolate em pó, 1 colher de margarina.</p>
+        <p><strong>Modo de preparo:</strong><br>
+          Bata ovos, cenoura, óleo e açúcar no liquidificador. Misture com farinha e fermento peneirados. Asse em forno 180ºC por 40 minutos. Para a cobertura, cozinhe leite condensado, chocolate e margarina até engrossar e despeje sobre o bolo quente.</p>
+        <a href="https://guiadacozinha.com.br/receitas/bolo-de-cenoura-aprenda-a-fazer-a-receita-tradicional-e-muito-fofinha/" target="_blank" rel="noopener noreferrer">Ver receita completa</a>
+      </article>
+
+      <article class="receita">
+        <h3>Brigadeiro Gourmet</h3>
+        <p>Receita prática e deliciosa com chocolate 70% e granulado belga. Ideal para festas ou presentear!</p>
+        <p><strong>Ingredientes:</strong><br>
+          1 lata de leite condensado, 100g de chocolate ao leite picado, 1 colher de manteiga, 1 gema peneirada, granulado para confeitar.</p>
+        <p><strong>Modo de preparo:</strong><br>
+          Derreta chocolate e manteiga em fogo baixo. Misture com leite condensado e gema, mexa por 15 minutos até desgrudar. Deixe esfriar, enrole bolinhas e passe no granulado.</p>
+        <a href="https://www.tudogostoso.com.br/receita/177342-brigadeiro-gourmet-facil.html" target="_blank" rel="noopener noreferrer">Ver receita completa</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="comentarios">
+    <h2>Deixe seu comentário</h2>
+    <form id="form-comentario" action="https://formspree.io/f/yourformid" method="POST">
+      <textarea name="comentario" placeholder="Escreva aqui seu comentário..." required></textarea>
+      <input type="hidden" name="_replyto" value="mycaellerodriguesdasilva1@gmail.com" />
+      <button type="submit">Enviar Comentário</button>
+    </form>
+    <div id="msg-sucesso" style="display:none;">Obrigado pelo seu comentário! 😊</div>
+  </section>
+
+  <footer>
+    &copy; 2025 Receitas da Mycaelle • Todos os direitos reservados
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-comentario');
+    const msgSucesso = document.getElementById('msg-sucesso');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if(response.ok){
+          msgSucesso.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Erro ao enviar o comentário. Tente novamente.');
+        }
+      }).catch(() => {
+        alert('Erro ao enviar o comentário. Tente novamente.');
+      });
+    });
+  </script>
+
+</body>
+</html>
